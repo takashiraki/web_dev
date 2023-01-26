@@ -4,8 +4,17 @@ class Fullname {
     private $first_name;
     private $family_name;
 
+    const MAXLENGTH = 50;
+
     public function __construct(string $first_name_obj, string $family_name_obj)
     {
+
+        $name_length = mb_strlen($family_name_obj) + mb_strlen($first_name_obj);
+
+        if(self::MAXLENGTH < $name_length){
+            throw new Exception('Max name length is 50.');
+        }
+
         $this->first_name = $first_name_obj;
         $this->family_name = $family_name_obj;
     }
