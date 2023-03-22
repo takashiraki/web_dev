@@ -7,15 +7,12 @@ This is a memo about web developping like architecture , how to coding and so on
 * book of System design
 
 ### about ddd
----
 this part is writing about ddd
 
 ### about oop
----
 this part is writing about oop
 
 ### book of system design
----
 this part is writing book of system design
 
 ## Qiita
