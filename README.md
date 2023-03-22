@@ -1,1 +1,1 @@
-# web開発のメモ
+# memo about wev developping
