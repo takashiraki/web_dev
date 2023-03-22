@@ -49,6 +49,19 @@ class User{
 
         return true;
     }
+
+    public function is_duplicated(Username $user_name)
+    {
+        // DBから名前を引っ張る
+        $get_name = '';
+
+        if($user_name === $get_name){
+            // 名前が重複していた場合、false
+            return false;
+        }
+
+        return true;
+    }
 }
 
 class UserName{
