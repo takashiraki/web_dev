@@ -1,6 +1,7 @@
 <?php
 
-class User{
+class User
+{
 
     /**
      * @var UserName
@@ -25,7 +26,7 @@ class User{
 
     public function chage_name(UserName $new_name)
     {
-        if(empty($new_name)){
+        if (empty($new_name)) {
             throw new Exception('You need new name');
         }
 
@@ -34,7 +35,7 @@ class User{
 
     public function Equals_name(UserName $comparison_name_obj)
     {
-        if($this->username !== $comparison_name_obj){
+        if ($this->username !== $comparison_name_obj) {
             return false;
         }
 
@@ -43,7 +44,7 @@ class User{
 
     public function Equals_id(UserId $comparison_id_obj)
     {
-        if($this->userid !== $comparison_id_obj){
+        if ($this->userid !== $comparison_id_obj) {
             return false;
         }
 
@@ -55,7 +56,7 @@ class User{
         // DBから名前を引っ張る
         $get_name = '';
 
-        if($user_name === $get_name){
+        if ($user_name === $get_name) {
             // 名前が重複していた場合、false
             return false;
         }
@@ -64,16 +65,17 @@ class User{
     }
 }
 
-class UserName{
-    
+class UserName
+{
+
     /**
      * @var string
      */
-     private $username;
-    
+    private $username;
+
     public function __construct(string $user_name)
     {
-        if(empty($user_name)){
+        if (empty($user_name)) {
             throw new Exception('you need user name');
         }
 
@@ -81,7 +83,8 @@ class UserName{
     }
 }
 
-class UserId{
+class UserId
+{
 
     /**
      * @var string
@@ -90,7 +93,7 @@ class UserId{
 
     public function __construct(string $value)
     {
-        if(empty($value)){
+        if (empty($value)) {
             throw new Exception('You need ID');
         }
 

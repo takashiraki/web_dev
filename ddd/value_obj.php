@@ -1,6 +1,7 @@
 <?php
 
-class Fullname {
+class Fullname
+{
 
     /**
      *
@@ -20,16 +21,19 @@ class Fullname {
         $this->family_name = $family_name_obj;
     }
 
-    public function get_family_name() {
+    public function get_family_name()
+    {
         return $this->family_name;
     }
 
-    public function get_first_name(){
+    public function get_first_name()
+    {
         return $this->first_name;
     }
 }
 
-class FamilyName{
+class FamilyName
+{
 
     /**
      * FamilyName
@@ -44,7 +48,8 @@ class FamilyName{
     }
 }
 
-class FirstName{
+class FirstName
+{
 
     /**
      * FirstName
@@ -61,12 +66,12 @@ class FirstName{
 
 $family_name1 = new FamilyName('tanaka');
 $first_name1 = new FirstName('taro');
-$full_name1 = new Fullname($first_name1,$family_name1);
+$full_name1 = new Fullname($first_name1, $family_name1);
 
 $get_first_name1 = $full_name1->get_first_name();
 
 $family_name2 = new FamilyName('Suzuki');
 $first_name2 = new FirstName('sonoko');
-$full_name2 = new Fullname($first_name2,$family_name2);
+$full_name2 = new Fullname($first_name2, $family_name2);
 
 $get_first_name2 = $full_name2->get_first_name();
